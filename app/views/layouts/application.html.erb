@@ -3,12 +3,25 @@
 <head>
   <title>Depot</title>
   <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag	"depot",:media => "all"%>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
+<body id="store">
+	<div id="banner">
+		<%= image_tag("logo.png")%>
+		<%= @page_title || "Pragmatic Bookshelf"%>
+	</div>
+	<div id="columns">
+		<div id="side">
+			<a href="">Home</a><br />
+			<a href="#">问题列表</a><br />
+			<a >新的</a><br/>
+			<a >联系我们</a><br/>
+		</div>
+		<div id="main">
+			<%= yield %>
+		</div>
+	</div>
 </body>
 </html>

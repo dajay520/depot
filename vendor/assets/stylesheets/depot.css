@@ -1,3 +1,17 @@
+
+*{margin:0; padding:0;}
+
+body, html {
+	margin: 0px;
+	padding: 0px;
+	}
+	
+body {
+	background: #89725b url(/images/bg.jpg) repeat-y center;
+	font-family: verdana, arial, tahoma, sans-serif;
+	font-size: 8pt;
+	}
+
 /* Global styles */
 
 #store #notice {
@@ -141,4 +155,6 @@
 }
 #side a {
 color: #bfb; font-size: small;
+}
+#store .entry form, #store .entry form div { display: inline;
 }

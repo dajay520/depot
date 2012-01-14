@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta　 http-equiv="Expires"　 CONTENT="10">　 
+
   <title>Depot</title>
   <%= stylesheet_link_tag    "application" %>
   <%= stylesheet_link_tag	"depot",:media => "all"%>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.2"></script>  
+<style type="text/css">
+html{height:100%}
+body{height:100%;margin:0px;padding:0px}
+#container{height:50%}
+</style>
 </head>
 <body id="store">
+	<div id="container">
+	tianjunjie
+	</div>
+	<script>
+		var map = new BMap.Map("container"); 
+		var point = new BMap.Point(116.404, 39.915);  // 创建点坐标  
+		map.centerAndZoom("扬州");
+	</script>
 	<div id="banner">
 		<%= image_tag("/images/logo.png")%>
 		<%= @page_title || "Pragmatic Bookshelf"%>
@@ -22,6 +38,8 @@
 		<div id="main">
 			<%= yield %>
 		</div>
+
 	</div>
 </body>
+
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>map</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="dajay">
+	<!-- Date: 2012-01-15 -->
+	<style type="text/css">
+	html{height:100%}
+	body{height:100%;margin:0px;padding:0px}
+	#container{height:50%}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.2"></script>  
+	
+</head>
+<body>
+	<div id="container" height=100 width=100>
+	tianjunjie
+	</div>
+	<script>
+		var map = new BMap.Map("container"); 
+		var point = new BMap.Point(116.404, 39.915);  // 创建点坐标  
+		map.centerAndZoom(point, 15);
+	</script>
+</body>
+</html>
